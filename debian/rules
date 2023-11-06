@@ -1,9 +1,5 @@
 #!/usr/bin/make -f
 
-#export DH_VERBOSE=1
-export LC_ALL=C.UTF-8
-export PYBUILD_TEST_ARGS=-k 'not test_command'
-
 %:
 	dh $@ --with python3,sphinxdoc --buildsystem=pybuild
 
@@ -13,8 +9,7 @@ ifeq (,$(findstring nodocs, $(DEB_BUILD_OPTIONS)))
 	dh_sphinxdoc -O--buildsystem=pybuild
 endif
 
-override_dh_installchangelogs:
-	dh_installchangelogs -k docs/changelog.rst
-
-execute_after_dh_auto_install:
-	rm -r debian/tmp/usr/lib/python3*/dist-packages/jupyter_core/tests
+override_dh_auto_test:
+ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
+	HOME=/tmp/homedir PYTHONPATH=. python3 -m pytest
+endif

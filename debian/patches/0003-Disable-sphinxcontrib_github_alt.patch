@@ -9,14 +9,14 @@ file which could perhaps be bundled).
  1 file changed, 1 deletion(-)
 
 diff --git a/docs/conf.py b/docs/conf.py
-index 83ac00c..ec529ae 100644
+index df98735..65736d6 100644
 --- a/docs/conf.py
 +++ b/docs/conf.py
-@@ -28,7 +28,6 @@
- extensions = [
-     'sphinx.ext.autodoc',
-     'sphinx.ext.intersphinx',
--    'sphinxcontrib_github_alt',
+@@ -34,7 +34,6 @@ extensions = [
+     "myst_parser",
+     "sphinx.ext.autodoc",
+     "sphinx.ext.intersphinx",
+-    "sphinxcontrib_github_alt",
+     "sphinx_autodoc_typehints",
  ]
  
- github_project_url = "https://github.com/jupyter/jupyter_core"

@@ -1,20 +1,22 @@
 Source: jupyter-core
-Uploaders: Julien Puydt <jpuydt@debian.org>,
-           Gordon Ball <gordon@chronitis.net>
+Uploaders: Julien Puydt <jpuydt@debian.org>, Gordon Ball <gordon@chronitis.net>
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Section: python
 Priority: optional
-Standards-Version: 4.6.0
+Standards-Version: 4.6.1
 Homepage: https://github.com/jupyter/jupyter_core
 Build-Depends: debhelper-compat (= 13),
                dh-python,
+               pybuild-plugin-pyproject,
                python3-all,
+               python3-hatchling,
                python3-ipython <!nocheck>,
-               python3-ipython-genutils,
+               python3-myst-parser <!nodoc>,
+               python3-platformdirs <!nocheck>,
                python3-pytest <!nocheck>,
-               python3-setuptools,
-               python3-sphinx,
-               python3-traitlets
+               python3-sphinx <!nodoc>,
+               python3-sphinx-autodoc-typehints <!nodoc>,
+               python3-traitlets <!nocheck>,
 Vcs-Git: https://salsa.debian.org/python-team/packages/jupyter-core.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/jupyter-core
 Testsuite: autopkgtest-pkg-python
@@ -22,10 +24,7 @@ Rules-Requires-Root: no
 
 Package: python3-jupyter-core
 Architecture: all
-Depends: ${misc:Depends},
-         ${python3:Depends},
-         python3-ipython-genutils,
-         python3-distutils
+Depends: python3-distutils, ${misc:Depends}, ${python3:Depends}
 Suggests: python3-pip
 Description: Core common functionality of Jupyter projects for Python 3
  This software component contains the base framework (application
@@ -65,14 +64,12 @@ Package: jupyter
 Architecture: all
 Multi-Arch: foreign
 Section: metapackages
-Depends: ${misc:Depends},
-         jupyter-core,
-         jupyter-client,
+Depends: jupyter-client,
          jupyter-console,
-         jupyter-nbformat
-Recommends: jupyter-nbconvert,
-            jupyter-notebook,
-            python3-ipykernel
+         jupyter-core,
+         jupyter-nbformat,
+         ${misc:Depends}
+Recommends: jupyter-nbconvert, jupyter-notebook, python3-ipykernel
 Suggests: jupyter-qtconsole
 Description: Interactive computing environment (metapackage)
  Project Jupyter provides tools for interactive computing, useful for data
