@@ -1,31 +1,42 @@
 Source: jupyter-core
-Uploaders: Julien Puydt <jpuydt@debian.org>, Gordon Ball <gordon@chronitis.net>
+Uploaders: Julien Puydt <jpuydt@debian.org>,
+           Gordon Ball <gordon@chronitis.net>
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Section: python
 Priority: optional
-Standards-Version: 4.6.1
+Standards-Version: 4.7.0
 Homepage: https://github.com/jupyter/jupyter_core
 Build-Depends: debhelper-compat (= 13),
-               dh-python,
+               dh-exec,
+               dh-sequence-python3,
+               dh-sequence-sphinxdoc <!nodoc>,
                pybuild-plugin-pyproject,
                python3-all,
+               python3-doc <!nodoc>,
+               python3-enchant <!nodoc>,
                python3-hatchling,
                python3-ipython <!nocheck>,
                python3-myst-parser <!nodoc>,
+               python3-pip <!nocheck>,
                python3-platformdirs <!nocheck>,
+               python3-pydata-sphinx-theme <!nodoc>,
                python3-pytest <!nocheck>,
                python3-sphinx <!nodoc>,
                python3-sphinx-autodoc-typehints <!nodoc>,
-               python3-traitlets <!nocheck>,
+               python3-sphinxcontrib-github-alt <!nodoc>,
+               python3-sphinxcontrib.spelling <!nodoc>,
+               python3-traitlets <!nocheck>
 Vcs-Git: https://salsa.debian.org/python-team/packages/jupyter-core.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/jupyter-core
-Testsuite: autopkgtest-pkg-python
+Testsuite: autopkgtest-pkg-pybuild
 Rules-Requires-Root: no
 
 Package: python3-jupyter-core
 Architecture: all
-Depends: python3-distutils, ${misc:Depends}, ${python3:Depends}
-Suggests: python3-pip
+Depends: ${misc:Depends},
+         ${python3:Depends}
+Suggests: python-jupyter-core-doc,
+          python3-pip
 Description: Core common functionality of Jupyter projects for Python 3
  This software component contains the base framework (application
  classes and configurations) for the rest of the Jupyter projects ; it
@@ -39,6 +50,7 @@ Section: utils
 Depends: python3-jupyter-core (= ${binary:Version}),
          ${misc:Depends},
          ${python3:Depends}
+Suggests: python-jupyter-core-doc
 Description: Core common functionality of Jupyter projects (tools)
  This software component contains the base framework (application
  classes and configurations) for the rest of the Jupyter projects ; it
@@ -51,7 +63,11 @@ Package: python-jupyter-core-doc
 Architecture: all
 Multi-Arch: foreign
 Section: doc
-Depends: ${misc:Depends}, ${sphinxdoc:Depends}
+Depends: python3-doc,
+         ${misc:Depends},
+         ${sphinxdoc:Depends}
+Suggests: jupyter-core,
+          python3-jupyter-core
 Built-Using: ${sphinxdoc:Built-Using}
 Description: Core common functionality of Jupyter projects (documentation)
  This software component contains the base framework (application
@@ -59,6 +75,7 @@ Description: Core common functionality of Jupyter projects (documentation)
  doesn't do much by itself.
  .
  This package contains documentation.
+Build-Profiles: <!nodoc>
 
 Package: jupyter
 Architecture: all
@@ -69,8 +86,11 @@ Depends: jupyter-client,
          jupyter-core,
          jupyter-nbformat,
          ${misc:Depends}
-Recommends: jupyter-nbconvert, jupyter-notebook, python3-ipykernel
-Suggests: jupyter-qtconsole
+Recommends: jupyter-nbconvert,
+            jupyter-notebook,
+            python3-ipykernel
+Suggests: jupyter-qtconsole,
+          python-jupyter-core-doc
 Description: Interactive computing environment (metapackage)
  Project Jupyter provides tools for interactive computing, useful for data
  science, scientific computing and learning. Computational languages for

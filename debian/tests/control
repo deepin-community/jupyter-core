@@ -1,2 +1,0 @@
-Tests: jupyter-core
-Depends: python3-all, python3-pytest, @

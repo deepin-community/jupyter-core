@@ -1,4 +1,5 @@
 """Test the Jupyter command-line"""
+from __future__ import annotations
 
 import json
 import os
@@ -9,6 +10,7 @@ from unittest.mock import patch
 
 import pytest
 
+from jupyter_core import __version__
 from jupyter_core.command import list_subcommands
 from jupyter_core.paths import (
     jupyter_config_dir,
@@ -64,9 +66,9 @@ def write_executable(path, source):
         try:
             import importlib.resources
 
-            if not hasattr(importlib.resources, 'files'):
+            if not hasattr(importlib.resources, "files"):
                 raise ImportError
-            wp = importlib.resources.files('setuptools').joinpath('cli-32.exe')
+            wp = importlib.resources.files("setuptools").joinpath("cli-32.exe")
             w = wp.read_bytes()
         except (ImportError, FileNotFoundError, SystemError):
             pytest.skip(
@@ -247,3 +249,7 @@ print(sys.argv[0])
 
     # Make sure the first argv is the full path to the executing script
     assert f"{jupyter}-witness".encode() in out
+
+
+def test_version():
+    assert isinstance(__version__, str)

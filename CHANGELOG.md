@@ -2,6 +2,142 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 5.7.2
+
+([Full Changelog](https://github.com/jupyter/jupyter_core/compare/v5.7.1...1264a81fc834f18db2b41e136ec4ac9d1a4ad993))
+
+### Maintenance and upkeep improvements
+
+- Update Release Scripts [#396](https://github.com/jupyter/jupyter_core/pull/396) ([@blink1073](https://github.com/blink1073))
+- Enforce pytest 7 [#393](https://github.com/jupyter/jupyter_core/pull/393) ([@blink1073](https://github.com/blink1073))
+- chore: update pre-commit hooks [#392](https://github.com/jupyter/jupyter_core/pull/392) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/jupyter_core/graphs/contributors?from=2024-01-08&to=2024-03-12&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Ablink1073+updated%3A2024-01-08..2024-03-12&type=Issues) | [@pre-commit-ci](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Apre-commit-ci+updated%3A2024-01-08..2024-03-12&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
+## 5.7.1
+
+([Full Changelog](https://github.com/jupyter/jupyter_core/compare/v5.7.0...8e69e7f1b856099c057e9711d5a439b33ef859d3))
+
+### Bugs fixed
+
+- Derive JupyterAsyncApp from JupyterApp [#389](https://github.com/jupyter/jupyter_core/pull/389) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/jupyter_core/graphs/contributors?from=2024-01-03&to=2024-01-08&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Ablink1073+updated%3A2024-01-03..2024-01-08&type=Issues)
+
+## 5.7.0
+
+([Full Changelog](https://github.com/jupyter/jupyter_core/compare/v5.6.1...19912f49cfb9e2645e08fd1bd599b95206387d2d))
+
+### Enhancements made
+
+- Modernize event loop behavior [#387](https://github.com/jupyter/jupyter_core/pull/387) ([@blink1073](https://github.com/blink1073))
+
+### Maintenance and upkeep improvements
+
+- chore: update pre-commit hooks [#388](https://github.com/jupyter/jupyter_core/pull/388) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/jupyter_core/graphs/contributors?from=2024-01-01&to=2024-01-03&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Ablink1073+updated%3A2024-01-01..2024-01-03&type=Issues) | [@pre-commit-ci](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Apre-commit-ci+updated%3A2024-01-01..2024-01-03&type=Issues)
+
+## 5.6.1
+
+([Full Changelog](https://github.com/jupyter/jupyter_core/compare/v5.6.0...f81186b2f31fe79949fe5bcd5ea0da6b0794a8fb))
+
+### Bugs fixed
+
+- Fix export of package version [#386](https://github.com/jupyter/jupyter_core/pull/386) ([@blink1073](https://github.com/blink1073))
+- Revert "Enable async JupyterApp" [#385](https://github.com/jupyter/jupyter_core/pull/385) ([@blink1073](https://github.com/blink1073))
+
+### Maintenance and upkeep improvements
+
+- Bump github/codeql-action from 2 to 3 [#380](https://github.com/jupyter/jupyter_core/pull/380) ([@dependabot](https://github.com/dependabot))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/jupyter_core/graphs/contributors?from=2023-12-26&to=2024-01-01&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Ablink1073+updated%3A2023-12-26..2024-01-01&type=Issues) | [@dependabot](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Adependabot+updated%3A2023-12-26..2024-01-01&type=Issues)
+
+## 5.6.0
+
+([Full Changelog](https://github.com/jupyter/jupyter_core/compare/v5.5.1...e33fb748b435de7d587d9c2bfdcbb5f3ee73b4bd))
+
+### Enhancements made
+
+- Enable async JupyterApp [#381](https://github.com/jupyter/jupyter_core/pull/381) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/jupyter_core/graphs/contributors?from=2023-12-18&to=2023-12-26&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Ablink1073+updated%3A2023-12-18..2023-12-26&type=Issues)
+
+## 5.5.1
+
+([Full Changelog](https://github.com/jupyter/jupyter_core/compare/v5.5.0...4e387a4e95b1064cca4a97dd7324b29d14b6e3b7))
+
+### Bugs fixed
+
+- Account for read only file systems in migration [#379](https://github.com/jupyter/jupyter_core/pull/379) ([@blink1073](https://github.com/blink1073))
+
+### Maintenance and upkeep improvements
+
+- Update ruff and typings [#376](https://github.com/jupyter/jupyter_core/pull/376) ([@blink1073](https://github.com/blink1073))
+- chore: update pre-commit hooks [#374](https://github.com/jupyter/jupyter_core/pull/374) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- Clean up lint and add downstream checks [#373](https://github.com/jupyter/jupyter_core/pull/373) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/jupyter_core/graphs/contributors?from=2023-10-30&to=2023-12-18&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Ablink1073+updated%3A2023-10-30..2023-12-18&type=Issues) | [@mtelka](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Amtelka+updated%3A2023-10-30..2023-12-18&type=Issues) | [@pre-commit-ci](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Apre-commit-ci+updated%3A2023-10-30..2023-12-18&type=Issues)
+
+## 5.5.0
+
+([Full Changelog](https://github.com/jupyter/jupyter_core/compare/v5.4.0...df0e9e709ebe208df799ec08030b7d7eb15c9cf9))
+
+### Maintenance and upkeep improvements
+
+- Fix typing for traitlets 5.13 [#372](https://github.com/jupyter/jupyter_core/pull/372) ([@blink1073](https://github.com/blink1073))
+- Adopt pydata sphinx theme [#371](https://github.com/jupyter/jupyter_core/pull/371) ([@blink1073](https://github.com/blink1073))
+- Use ruff format [#370](https://github.com/jupyter/jupyter_core/pull/370) ([@blink1073](https://github.com/blink1073))
+- Update typings for mypy 1.6 [#368](https://github.com/jupyter/jupyter_core/pull/368) ([@blink1073](https://github.com/blink1073))
+- Lowercase APPNAME on macOS Homebrew [#364](https://github.com/jupyter/jupyter_core/pull/364) ([@singingwolfboy](https://github.com/singingwolfboy))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/jupyter_core/graphs/contributors?from=2023-10-10&to=2023-10-30&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Ablink1073+updated%3A2023-10-10..2023-10-30&type=Issues) | [@singingwolfboy](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Asingingwolfboy+updated%3A2023-10-10..2023-10-30&type=Issues)
+
+## 5.4.0
+
+([Full Changelog](https://github.com/jupyter/jupyter_core/compare/v5.3.2...d6a748262a44334f27008e8c90d2557f46481f5b))
+
+### Maintenance and upkeep improvements
+
+- Add python 3.12 support [#367](https://github.com/jupyter/jupyter_core/pull/367) ([@blink1073](https://github.com/blink1073))
+- Update typings for traitlets 5.11 [#366](https://github.com/jupyter/jupyter_core/pull/366) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/jupyter_core/graphs/contributors?from=2023-09-27&to=2023-10-10&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Ablink1073+updated%3A2023-09-27..2023-10-10&type=Issues) | [@davidbrochart](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Adavidbrochart+updated%3A2023-09-27..2023-10-10&type=Issues) | [@jamescooke](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Ajamescooke+updated%3A2023-09-27..2023-10-10&type=Issues)
+
 ## 5.3.2
 
 ([Full Changelog](https://github.com/jupyter/jupyter_core/compare/v5.3.1...0cf041784533c56da138a0947b6db29999790247))
@@ -20,8 +156,6 @@
 ([GitHub contributors page for this release](https://github.com/jupyter/jupyter_core/graphs/contributors?from=2023-06-14&to=2023-09-27&type=c))
 
 [@blink1073](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Ablink1073+updated%3A2023-06-14..2023-09-27&type=Issues) | [@dependabot](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Adependabot+updated%3A2023-06-14..2023-09-27&type=Issues) | [@pre-commit-ci](https://github.com/search?q=repo%3Ajupyter%2Fjupyter_core+involves%3Apre-commit-ci+updated%3A2023-06-14..2023-09-27&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 5.3.1
 

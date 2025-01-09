@@ -1,3 +1,58 @@
+jupyter-core (5.7.2-5) unstable; urgency=medium
+
+  * Team upload
+  * Suggest -doc package in python packages, and vice versa
+  * Handle newer sphinx version intersphinx syntax (closes: #1090101)
+  * Improve subcommand description in jupyter(1) (closes: #1085157)
+  * Install bash and zsh completions
+
+ -- Julian Gilbey <jdg@debian.org>  Tue, 17 Dec 2024 08:04:18 +0000
+
+jupyter-core (5.7.2-4) unstable; urgency=medium
+
+  * Team upload
+  * Improve watchfile so downloaded source has sensible filename
+
+ -- Julian Gilbey <jdg@debian.org>  Sun, 04 Aug 2024 12:47:24 +0100
+
+jupyter-core (5.7.2-3) unstable; urgency=medium
+
+  * Team upload
+  * Use sphinxcontrib-github-alt for documentation
+  * Run all tests
+
+ -- Julian Gilbey <jdg@debian.org>  Fri, 26 Jul 2024 08:56:52 +0100
+
+jupyter-core (5.7.2-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix path to clean generated files
+
+ -- Julian Gilbey <jdg@debian.org>  Sun, 21 Jul 2024 20:32:52 +0100
+
+jupyter-core (5.7.2-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version
+  * Move html documentation to /usr/share/doc/python3-jupyter-core
+  * Don't compress font files in -doc package
+
+ -- Julian Gilbey <jdg@debian.org>  Sun, 21 Jul 2024 20:17:10 +0100
+
+jupyter-core (5.3.2-3) unstable; urgency=medium
+
+  * Team upload
+  * Clean up after build (Closes: #1047824)
+
+ -- Diane Trout <diane@ghic.org>  Fri, 05 Jul 2024 12:05:38 -0700
+
+jupyter-core (5.3.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Remove stale dependency on python3-distutils (Closes: #1065883)
+
+ -- Alexandre Detiste <tchet@debian.org>  Fri, 31 May 2024 15:29:20 +0200
+
 jupyter-core (5.3.2-1) unstable; urgency=medium
 
   * New upstream version 5.3.2

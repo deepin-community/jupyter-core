@@ -1,0 +1,3 @@
+# We install these examples (shell completion functions) in the
+# correct locations
+jupyter-core source: package-does-not-install-examples
