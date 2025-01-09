@@ -1,15 +1,29 @@
 #!/usr/bin/make -f
 
-%:
-	dh $@ --with python3,sphinxdoc --buildsystem=pybuild
+export PYBUILD_NAME = jupyter-core
 
-override_dh_sphinxdoc:
-ifeq (,$(findstring nodocs, $(DEB_BUILD_OPTIONS)))
-	PYTHONPATH=. python3 -m sphinx -b html docs debian/python-jupyter-core-doc/usr/share/doc/python-jupyter-core-doc/html
-	dh_sphinxdoc -O--buildsystem=pybuild
-endif
+%:
+	dh $@ --buildsystem=pybuild
+
+execute_after_dh_auto_build:
+	PYTHONPATH=$$(pwd) make -C docs html
+
+override_dh_installdocs:
+	dh_installdocs -ppython-jupyter-core-doc --doc-main-package=python3-jupyter-core
+	dh_installdocs --remaining-packages
+
+execute_after_dh_install:
+	mv debian/python3-jupyter-core/usr/bin debian/jupyter-core/usr
+
+override_dh_compress:
+	dh_compress -ppython-jupyter-core-doc -X.ttf -X.eot
+	dh_compress --remaining-packages
 
 override_dh_auto_test:
-ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
-	HOME=/tmp/homedir PYTHONPATH=. python3 -m pytest
-endif
+	# These tests require jupyter-core to be installed, so should
+	# be excluded at build-time
+	PYBUILD_TEST_ARGS="\
+		--deselect=tests/test_command.py::test_not_on_path \
+		--deselect=tests/test_command.py::test_path_priority \
+		--deselect=tests/test_command.py::test_argv0" \
+		dh_auto_test

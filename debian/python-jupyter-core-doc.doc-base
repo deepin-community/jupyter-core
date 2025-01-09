@@ -5,5 +5,5 @@ Abstract: Sphinx documentation for Jupyter Core
 Section: Programming/Python
 
 Format: HTML
-Index: /usr/share/doc/python-jupyter-core-doc/html/index.html
-Files: /usr/share/doc/python-jupyter-core-doc/html/*
+Index: /usr/share/doc/python3-jupyter-core/html/index.html
+Files: /usr/share/doc/python3-jupyter-core/html/*

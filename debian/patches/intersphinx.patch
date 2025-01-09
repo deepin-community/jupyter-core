@@ -1,0 +1,17 @@
+Description: Use local Python docs for intersphinx
+Forwarded: not-needed
+Bug-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1090101
+Author: Julian Gilbey <jdg@debian.org>
+
+
+--- a/docs/conf.py
++++ b/docs/conf.py
+@@ -296,7 +296,7 @@
+ 
+ 
+ # Example configuration for intersphinx: refer to the Python standard library.
+-intersphinx_mapping = {"https://docs.python.org/3/": None}
++intersphinx_mapping = {"python": ("/usr/share/doc/python3-doc/html/", None)}
+ 
+ 
+ def setup(_):
